@@ -1,12 +1,11 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :destroy]
+  before_action :authorize, only: [:create, :destroy]
 
   def create
     @review = Review.new(review_params)
     @review.product_id = params[:product_id]
     @review.user = current_user
     did_save = @review.save
-    p params
     if did_save
       redirect_to :back, notice: 'Thanks for your review!'
     else
@@ -15,9 +14,11 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review.destroy
-    respond_to do |format|
-      redirect_to :back, notice: 'Review was successfully destroyed.'
+    if @review.user == current_user
+      @review.destroy
+      redirect_to :back, notice: 'Review was successfully deleted.'
+    else
+      redirect_to :back, notice: 'Can only delete your own reviews.'
     end
   end
 
