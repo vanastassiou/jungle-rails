@@ -56,16 +56,15 @@
         </div>
         <% end %>
       <% end %>
-    </div>
     <div>
-      <br>
       <h2>Reviews</h2>
         <% @product.reviews.reverse_each do |review| %>
-          <div class="well published-review col-xs-6 col-xs-offset-3">
+          <div class="well published-review">
             <%= render partial: 'review', locals: {review: review, user: review.user, current_user: current_user} %>
           </div>
         <% end %>
     </div>
+  </div>
 
 
   </article>
