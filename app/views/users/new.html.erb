@@ -1,12 +1,13 @@
 <h1>Register new user</h1>
 
 <%= form_for :user, url: '/users' do |form| %>
-
-  First name: <%= form.text_field :name %>
-  Last name: <%= form.text_field :name %>
-  E-mail address: <%= form.text_field :email %>
-  Password: <%= form.password_field :password %>
-  Confirm password: <%= form.password_field :password_confirmation %>
-  <%= form.submit 'Submit' %>
+  <div class="form-group">
+    First name: <%= form.text_field :name, class: 'form-control' %>
+    Last name: <%= form.text_field :name, class: 'form-control' %>
+    E-mail address: <%= form.text_field :email, class: 'form-control' %>
+    Password: <%= form.password_field :password, class: 'form-control' %>
+    Confirm password: <%= form.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+  <%= form.submit 'Submit', :class => 'btn' %>
 
 <% end %>

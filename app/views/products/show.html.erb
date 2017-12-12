@@ -46,14 +46,14 @@
 
         <div class="field">
           <%= f.label :"Review" %> <br>
-          <%= f.text_area :description %>
+          <%= f.text_area :description, :class => 'form-control' %>
         </div>
-        <div class="field">
+        <div class="dropdown">
           <%= f.label :rating %>
-          <%= f.select :rating, [1, 2, 3, 4, 5] %>
+          <%= f.select :rating, (1..5), :class => 'dropdown-toggle', :role => 'button', :'data-toggle' => 'dropdown'%>
         </div>
         <div class="actions">
-          <%= f.submit 'Submit review'%>
+          <%= f.submit 'Submit review', :class => 'btn' %>
         </div>
         <hr>
         <% end %>
