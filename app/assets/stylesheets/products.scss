@@ -82,6 +82,24 @@ main section.products-show {
   .product-detail {
     img.main-img {
       max-width: 100%;
+      margin: 1em;
     }
   }
+}
+
+div.published-review {
+  padding: 1em;
+}
+
+div.review-form {
+  margin: 1em;
+}
+
+div.dropdown {
+  margin: 1em;
+}
+
+
+.review-submit-button {
+  margin: 1em 0em 3em 0em;
 }
