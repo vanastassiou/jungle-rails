@@ -62,7 +62,7 @@
       <h2>Reviews</h2>
         <% @product.reviews.reverse_each do |review| %>
           <article>
-            <%= render partial: 'review', locals: {review: review, user: review.user} %>
+            <%= render partial: 'review', locals: {review: review, user: review.user, current_user: current_user} %>
           </article>
         <% end %>
     </div>
