@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      redirect_to :back, notice: 'Review was successfully destroyed.'
+      redirect_to :back, notice: 'Review was successfully deleted.'
     end
   end
 

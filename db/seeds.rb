@@ -25,7 +25,7 @@ end
 
 user1 = User.create!({
   first_name: 'Seymour',
-  last_name: 'McFakerfake',
+  last_name: 'McFakerface',
   email: 'seymour@fake.com',
   password: 'lol'
 })

@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find params[:id]
-    @review = @product.reviews.new
+    @product = Product.includes(:reviews, reviews: :user).find(params[:id])
+    @review = Review.new
   end
 
 end
