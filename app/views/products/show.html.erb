@@ -26,9 +26,9 @@
       </div>
 
       <div class="col-sm-8">
-
+        <hr>
         <% if current_user %>
-          <h2>Submit a review</h2>
+          <h2>What do you think about <%= @product.name %>?</h2>
           <%= form_for([@product, @review]) do |f| %>
 
           <% if @review.errors.any? %>
@@ -45,16 +45,17 @@
         <% end %>
 
         <div class="field">
-          <%= f.label :"Your thoughts" %><br>
+          <%= f.label :"Review" %> <br>
           <%= f.text_area :description %>
         </div>
         <div class="field">
-          <%= f.label :rating %><br>
+          <%= f.label :rating %>
           <%= f.select :rating, [1, 2, 3, 4, 5] %>
         </div>
         <div class="actions">
           <%= f.submit 'Submit review'%>
         </div>
+        <hr>
         <% end %>
       <% end %>
     </div>

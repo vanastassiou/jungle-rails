@@ -6,7 +6,6 @@ class ReviewsController < ApplicationController
     @review.product_id = params[:product_id]
     @review.user = current_user
     did_save = @review.save
-    p params
     if did_save
       redirect_to :back, notice: 'Thanks for your review!'
     else
@@ -15,9 +14,10 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review.destroy
-    respond_to do |format|
+    if @review.destroy
       redirect_to :back, notice: 'Review was successfully deleted.'
+    else
+      redirect_to :back, notice: 'Something went wrong. Please try again.'
     end
   end
 
