@@ -2,8 +2,8 @@
 
 <%= form_for :user, url: '/users' do |form| %>
   <div class="form-group">
-    First name: <%= form.text_field :name, class: 'form-control' %>
-    Last name: <%= form.text_field :name, class: 'form-control' %>
+    First name: <%= form.text_field :first_name, class: 'form-control' %>
+    Last name: <%= form.text_field :last_name, class: 'form-control' %>
     E-mail address: <%= form.text_field :email, class: 'form-control' %>
     Password: <%= form.password_field :password, class: 'form-control' %>
     Confirm password: <%= form.password_field :password_confirmation, class: 'form-control' %>
