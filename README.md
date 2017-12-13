@@ -36,3 +36,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screencaps
+
+!["Logged in view of product page"](https://github.com/vanastassiou/jungle-rails/blob/master/docs/logged-in.png)
+!["Logged out view of product page.](https://github.com/vanastassiou/jungle-rails/blob/master/docs/logged-out.png)
+!["Product dislay page with sold out badge."](https://github.com/vanastassiou/jungle-rails/blob/master/docs/soldout.png)
